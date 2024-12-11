@@ -77,15 +77,15 @@ const Header = ({ text }) => {
 
 // Counter Component
 const Counter = ({ initialCount }) => {
-  const [counter, setCounter] = useState(initialCount);
+  const [counter, setVal] = useState(initialCount);
 
-  const incrementCounter = () => setCounter((prev) => prev + 1);
-  const decrementCounter = () => setCounter((prev) => prev - 1);
+  const inCount = () => setVal((prev) => prev + 1);
+  const decrementCounter = () => setVal((prev) => prev - 1);
 
   return (
     <Card>
       <h2>Counter: {counter}</h2>
-      <button onClick={incrementCounter}>Increment</button>
+      <button onClick={inCount}>Increment</button>
       <button onClick={decrementCounter}>Decrement</button>
     </Card>
   );
